@@ -18,6 +18,8 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        background: #000;
+        font-family: Poppins;
       }
 
       .main {
@@ -25,12 +27,14 @@
         max-width: 800px;
       }
       .navbar {
-        padding: 10px;
         width: 100%;
         height: 100px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+      }
+      .left img {
+        filter: invert(100%);
       }
       .right {
         list-style-type: none;
@@ -38,24 +42,49 @@
         gap: 15px;
       }
       .right li a {
-        color: black;
+        color: white;
         text-decoration: none;
       }
-      .hero {
+      #hero {
+        color: white;
         min-height: calc(100vh - 120px);
         font-size: 50px;
         display: flex;
-        align-items: start;
+        align-items: center;
         text-align: center;
         justify-content: center;
         padding: 10px;
-        background-image: url("assets/phillip-goldsberry-fZuleEfeA1Q-unsplash.jpg");
+        opacity: 0.8;
+        background-image: url("assets/retro-living-room-interior-design_53876-145503.avif");
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
       }
-      .hero span {
-        text-decoration: underline #f00;
+      #hero span {
+        text-decoration: underline #017c7c;
+      }
+      #contact {
+        color: white;
+        align-self: center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      #contact input,
+      #contact textarea {
+        width: 90%;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+      #contact button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -66,16 +95,33 @@
           <img src="assets/logo.webp" alt="Logo" width="150" />
         </div>
         <ul class="right">
-          <li><a href="">Home</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="">Search</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="login.html">Login</a></li>
         </ul>
       </div>
-      <div class="hero">
+      <div id="hero">
         <div>
           Transforming Spaces with <span>Care</span> and <span>Comfort</span>
         </div>
+      </div>
+      <div id="contact">
+        <h1>Contact Us</h1>
+        <input
+          type="text"
+          placeholder="Enter name"
+          id="name"
+          name="name"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Enter email"
+          id="email"
+          name="email"
+          required
+        />
+        <textarea id="query" name="query" placeholder="Enter query"></textarea>
+        <button type="submit">Submit</button>
       </div>
     </div>
   </body>
